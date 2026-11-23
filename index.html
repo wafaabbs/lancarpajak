@@ -130,49 +130,48 @@ section{position:relative;padding:96px 0}
 .stagger>*:nth-child(4){animation-delay:.39s}.stagger>*:nth-child(5){animation-delay:.51s}
 @keyframes up{to{opacity:1;transform:none}}
 
-/* visual hero: kartu-kartu mengambang */
-.stage{position:relative;height:520px}
-.float{position:absolute;animation:float 7s ease-in-out infinite}
-.float.f2{animation-duration:8s;animation-delay:-2s}.float.f3{animation-duration:6.5s;animation-delay:-4s}.float.f4{animation-duration:9s;animation-delay:-1s}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -14px}}
-.pop-in{opacity:0;scale:.85;animation:popin .9s var(--spring) forwards}
+/* visual hero: mockup postingan Instagram @lancarpajak, carousel feed otomatis */
+.stage{position:relative;display:flex;justify-content:center;align-items:center}
+.pop-in{opacity:0;scale:.92;animation:popin 1s var(--spring) .35s forwards}
 @keyframes popin{to{opacity:1;scale:1}}
-.m-card{background:#fff;border-radius:24px;box-shadow:0 2px 0 rgba(4,73,50,.05),0 34px 60px -28px rgba(3,48,31,.55)}
-.m-chart{left:6%;top:4%;width:78%;padding:24px 26px 20px;rotate:-3deg}
-.m-head{display:flex;align-items:center;gap:12px}
-.m-ic{width:42px;height:42px;border-radius:13px;background:var(--dark);display:grid;place-items:center;flex:none}
-.m-ic svg{width:22px;height:22px}
-.m-title{font-size:17px;font-weight:800;letter-spacing:-.01em}
-.m-sub{font-size:13px;font-weight:600;color:var(--muted)}
-.m-pill{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dark);background:var(--mint);padding:5px 10px;border-radius:999px}
-.bars{margin-top:20px;height:150px;display:flex;align-items:flex-end;gap:12px;
-      background:repeating-linear-gradient(to top,rgba(4,73,50,.07) 0 1px,transparent 1px 37px)}
-.bars i{flex:1;border-radius:9px 9px 4px 4px;background:var(--mint);height:var(--h);transform-origin:bottom;transform:scaleY(0);animation:grow 1.1s var(--ease) forwards}
-.bars i.hi{background:linear-gradient(var(--dark),var(--mid))}
-.bars i.now{background:linear-gradient(var(--gold-hi),var(--gold-lo));box-shadow:0 10px 18px -8px rgba(184,137,26,.8)}
-@keyframes grow{to{transform:scaleY(1)}}
-.m-x{display:flex;gap:12px;margin-top:8px}
-.m-x span{flex:1;text-align:center;font-size:11.5px;font-weight:700;color:var(--muted)}
-.m-price{right:0;top:48%;width:300px;padding:22px 24px;border-radius:24px;color:#fff;rotate:3deg;
-         background:linear-gradient(130deg,var(--deep),var(--dark) 55%,var(--mid));box-shadow:inset 0 1.5px 0 rgba(233,196,90,.5),0 34px 60px -26px rgba(3,48,31,.7)}
-.m-price small{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);background:rgba(212,167,44,.15);padding:5px 10px;border-radius:999px}
-.m-price b{display:block;margin-top:10px;font-size:40px;font-weight:800;letter-spacing:-.04em;line-height:1}
-.m-price b em{font-style:normal;font-size:18px;color:var(--gold-hi);margin-right:4px}
-.m-price b span{font-size:16px;color:var(--gold-hi);font-weight:700;margin-left:4px}
-.m-price p{margin-top:8px;font-size:13px;color:var(--mint);font-weight:600}
-.m-chip{display:flex;align-items:center;gap:12px;padding:13px 18px 13px 13px;border-radius:18px}
-.m-chip .m-ic{width:38px;height:38px;border-radius:50%}
-.m-chip b{display:block;font-size:14.5px;font-weight:800;line-height:1.15}
-.m-chip small{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#1F7A4D;margin-top:3px}
-.m-chip small::before{content:"";width:8px;height:8px;border-radius:50%;background:#2FA36B;box-shadow:0 0 0 3px rgba(47,163,107,.18)}
-.m-c1{left:0;bottom:6%;rotate:2deg}
-.m-c2{right:-2%;top:-7%;rotate:4deg}
-.m-c2 .m-ic{background:linear-gradient(150deg,var(--gold-hi),var(--gold-lo))}
-.coin{position:absolute;left:58%;bottom:4%;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
-      background:linear-gradient(150deg,#F1D27A,var(--gold) 55%,#A97C14);box-shadow:0 14px 26px -10px rgba(120,85,10,.6),inset 0 2px 0 rgba(255,255,255,.45);
-      font-weight:800;font-size:22px;color:var(--deep);opacity:0;scale:.85;
-      animation:popin .9s var(--spring) 1.2s forwards,spin 9s ease-in-out 2s infinite}
-@keyframes spin{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(8deg) translateY(-12px)}}
+.igpost{position:relative;width:100%;max-width:420px;background:#fff;border-radius:26px;overflow:hidden;
+        box-shadow:0 2px 0 rgba(4,73,50,.05),0 50px 90px -40px rgba(3,48,31,.6),0 0 0 8px rgba(255,255,255,.45)}
+.igpost::before{content:"";position:absolute;inset:-60px -80px auto auto;width:260px;height:260px;z-index:-1;border-radius:50%;
+        background:radial-gradient(circle,rgba(233,196,90,.35),transparent 70%)}
+.ig-top{display:flex;align-items:center;gap:11px;padding:12px 14px}
+.ig-av{position:relative;flex:none;width:40px;height:40px;border-radius:50%;padding:2.5px;
+       background:conic-gradient(from 210deg,var(--gold-lo),var(--gold-hi),var(--light),var(--dark),var(--gold-lo))}
+.ig-av span{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;background:#FAF7F0;border:2px solid #fff}
+.ig-av img{width:100%;height:100%;object-fit:cover}
+.ig-name{flex:1;line-height:1.2}
+.ig-name b{display:flex;align-items:center;gap:4px;font-size:14.5px;font-weight:800;color:var(--ink)}
+.ig-name b svg{width:14px;height:14px}
+.ig-name small{font-size:12px;font-weight:600;color:var(--muted)}
+.ig-more{display:flex;gap:3px;padding:6px}
+.ig-more i{width:4px;height:4px;border-radius:50%;background:var(--ink)}
+.ig-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--cream);touch-action:pan-y;cursor:grab}
+.ig-track{display:flex;height:100%;transition:transform .7s var(--ease)}
+.ig-track img{flex:none;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.ig-count{position:absolute;top:12px;right:12px;font-size:12.5px;font-weight:700;color:#fff;background:rgba(22,35,28,.65);
+          padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+.ig-nav{position:absolute;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:rgba(255,255,255,.88);
+        display:grid;place-items:center;box-shadow:0 4px 12px -4px rgba(0,0,0,.35);opacity:0;transition:opacity .3s}
+.ig-nav svg{width:15px;height:15px}
+.ig-nav.prev{left:10px}.ig-nav.prev svg{transform:scaleX(-1)}
+.ig-nav.next{right:10px}
+.ig-media:hover .ig-nav{opacity:1}
+.ig-act{display:flex;align-items:center;gap:14px;padding:11px 14px 4px}
+.ig-act svg{width:25px;height:25px}
+.ig-act .heart{transition:transform .3s var(--spring)}
+.ig-act .heart.pop{transform:scale(1.25)}
+.ig-dots{flex:1;display:flex;justify-content:center;gap:5px;margin-right:78px}
+.ig-dots i{width:6px;height:6px;border-radius:50%;background:#D6D9D7;transition:all .35s var(--ease)}
+.ig-dots i.on{background:var(--dark);transform:scale(1.15)}
+.ig-cap{padding:4px 14px 16px;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.ig-cap b{font-weight:800}
+.ig-cap em{font-style:normal;color:#1F5FA8;font-weight:600}
+.ig-cap small{display:block;margin-top:4px;font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
 
 /* ---------- marquee layanan ---------- */
 .marquee{background:var(--dark);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.2deg);margin:0 -20px;box-shadow:0 20px 40px -24px rgba(3,48,31,.6)}
@@ -406,9 +405,7 @@ footer img{height:30px;width:auto}
   .photo-bg.light::after{background:
     linear-gradient(180deg,rgba(245,242,234,.55) 0%,rgba(245,242,234,.92) 35%,rgba(245,242,234,.92) 70%,var(--cream) 100%)}
   .hero .container,.price-wrap,.two{grid-template-columns:1fr}
-  .stage{height:430px;max-width:520px;width:100%;margin:0 auto}
-  .m-price{width:250px}
-  .m-price b{font-size:34px}
+  .stage{margin-top:8px}
 }
 @media (max-width:600px){
   .container{padding:0 18px}
@@ -417,11 +414,7 @@ footer img{height:30px;width:auto}
   .nav .btn{display:none}
   .hero h1{font-size:40px}
   .hero .ctas .btn{flex:1 1 100%}
-  .stage{height:380px}
-  .m-chart{width:90%;left:0;padding:18px}
-  .bars{height:110px}
-  .m-price{width:220px;padding:18px}
-  .m-c2{right:0}
+  .igpost{border-radius:22px}
   .svc-grid,.jasa-grid{grid-template-columns:1fr}
   .chips{grid-template-columns:repeat(3,1fr)}
   .chip{font-size:13.5px;padding:10px 6px}
@@ -491,30 +484,28 @@ footer img{height:30px;width:auto}
         </div>
       </div>
 
-      <div class="stage" aria-hidden="true">
-        <div class="float" style="position:absolute;inset:0"><div class="m-card m-chart pop-in" style="position:absolute;animation-delay:.3s">
-          <div class="m-head">
-            <div class="m-ic" data-icon="chart" data-c="#E9C45A"></div>
-            <div><div class="m-title">Laporan Laba Rugi</div><div class="m-sub">Tersusun rapi tiap bulan</div></div>
-            <div class="m-pill">Bulanan</div>
+      <div class="stage">
+        <div class="igpost pop-in" aria-label="Contoh postingan Instagram @lancarpajak">
+          <div class="ig-top">
+            <div class="ig-av"><span><img src="assets/avatar.png" alt="LancarPajak" width="80" height="80"></span></div>
+            <div class="ig-name"><b>lancarpajak <span data-icon="verified" data-c="#044932" style="width:14px;height:14px"></span></b><small>Jasa Akuntansi &amp; Perpajakan</small></div>
+            <div class="ig-more"><i></i><i></i><i></i></div>
           </div>
-          <div class="bars"><i style="--h:38%;animation-delay:.9s"></i><i style="--h:54%;animation-delay:1s"></i><i style="--h:46%;animation-delay:1.1s"></i><i class="hi" style="--h:66%;animation-delay:1.2s"></i><i class="hi" style="--h:74%;animation-delay:1.3s"></i><i class="now" style="--h:94%;animation-delay:1.4s"></i></div>
-          <div class="m-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>Mei</span><span>Jun</span></div>
-        </div></div>
-        <div class="float f2" style="position:absolute;inset:0"><div class="m-price pop-in" style="position:absolute;animation-delay:.6s">
-          <small>Paket badan usaha</small>
-          <b><em>Rp</em>800.000<span>/bln</span></b>
-          <p>Mulai dari · 15 layanan</p>
-        </div></div>
-        <div class="float f3" style="position:absolute;inset:0"><div class="m-card m-chip m-c1 pop-in" style="position:absolute;animation-delay:.8s">
-          <div class="m-ic" data-icon="doccheck" data-c="#D9E7C6"></div>
-          <div><b>SPT Tahunan</b><small>Terlapor</small></div>
-        </div></div>
-        <div class="float f4" style="position:absolute;inset:0"><div class="m-card m-chip m-c2 pop-in" style="position:absolute;animation-delay:1s">
-          <div class="m-ic" data-icon="receipt" data-c="#03301F"></div>
-          <div><b>Faktur Pajak</b><small>Terbit</small></div>
-        </div></div>
-        <div class="coin">Rp</div>
+          <div class="ig-media" id="igMedia">
+            <div class="ig-track" id="igTrack"></div>
+            <span class="ig-count" id="igCount"></span>
+            <button class="ig-nav prev" id="igPrev" type="button" aria-label="Sebelumnya"><span data-icon="arrow" data-c="#16231C" style="width:15px;height:15px"></span></button>
+            <button class="ig-nav next" id="igNext" type="button" aria-label="Berikutnya"><span data-icon="arrow" data-c="#16231C" style="width:15px;height:15px"></span></button>
+          </div>
+          <div class="ig-act">
+            <span class="heart" id="igHeart" data-icon="heart" data-c="#16231C" style="width:25px;height:25px"></span>
+            <span data-icon="comment" data-c="#16231C" style="width:25px;height:25px"></span>
+            <span data-icon="send" data-c="#16231C" style="width:25px;height:25px"></span>
+            <div class="ig-dots" id="igDots"></div>
+            <span data-icon="save" data-c="#16231C" style="width:25px;height:25px"></span>
+          </div>
+          <div class="ig-cap"><b>lancarpajak</b> <span id="igCap"></span> <em>#LancarPajak</em><small>Geser untuk lihat feed lainnya</small></div>
+        </div>
       </div>
     </div>
   </section>
@@ -746,6 +737,12 @@ const P = {
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
   mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  avatar: '<path d="M8 4h4.5l-3 11H17l-1.4 5H4z" fill="#E9C45A" stroke="none"/>',
+  verified: '<path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2z" fill="currentColor" stroke="none"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2.2"/>',
+  heart: '<path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/>',
+  comment: '<path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.3-4.6A8.5 8.5 0 1 1 20.5 12z"/>',
+  send: '<path d="M21.5 3L10 14.5"/><path d="M21.5 3l-7 18-4.5-6.5L3 10z"/>',
+  save: '<path d="M19 21l-7-5-7 5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/>',
   video: '<rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/>'
 };
 // ukuran ikon diatur CSS tiap komponen; color = warna untuk ikon yang pakai fill (WhatsApp)
@@ -1038,6 +1035,56 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 paintIcons();
 setTimeout(() => $("#heroHl").classList.add("in"), 500);   // sapuan emas di judul hero "tergambar" setelah teks muncul
+
+/* =========================================================================
+   CAROUSEL FEED IG DI HERO: geser otomatis, bisa di-swipe/klik
+   Ganti gambar di assets/feed/ (rasio 4:5) dan ubah daftar di bawah.
+   ========================================================================= */
+const FEED_SLIDES = [
+  { src: "assets/feed/feed-1.jpg", cap: "Semua layanan pajak & akuntansi dalam satu tempat 📌" },
+  { src: "assets/feed/feed-2.jpg", cap: "Paket badan usaha mulai Rp800.000/bulan, 15 layanan sekaligus." },
+  { src: "assets/feed/feed-3.jpg", cap: "Detail fasilitas di semua paket badan usaha." },
+  { src: "assets/feed/feed-4.jpg", cap: "SPT Tahunan Orang Pribadi mulai Rp300.000." },
+  { src: "assets/feed/feed-5.jpg", cap: "Fasilitas lengkap jasa SPT Tahunan OP." },
+  { src: "assets/feed/feed-6.jpg", cap: "Butuh NPWP, PKP, atau Coretax? Bisa pesan satuan." },
+  { src: "assets/feed/feed-7.jpg", cap: "Siapkan 9 dokumen ini untuk memulai." }
+];
+(() => {
+  const track = $("#igTrack"), media = $("#igMedia"), N = FEED_SLIDES.length;
+  track.innerHTML = FEED_SLIDES.map((f, i) =>
+    `<img src="${f.src}" alt="Feed Instagram LancarPajak ${i + 1}" width="720" height="900" ${i ? 'loading="lazy"' : 'fetchpriority="high"'} draggable="false">`).join("");
+  $("#igDots").innerHTML = FEED_SLIDES.map(() => "<i></i>").join("");
+  const dots = [...document.querySelectorAll("#igDots i")];
+  let i = 0, timer = null, paused = false;
+  const go = k => {
+    i = (k + N) % N;
+    track.style.transform = `translateX(${-i * 100}%)`;
+    dots.forEach((d, j) => d.classList.toggle("on", j === i));
+    $("#igCount").textContent = `${i + 1}/${N}`;
+    $("#igCap").textContent = FEED_SLIDES[i].cap;
+  };
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const start = () => { if (still) return; clearInterval(timer); timer = setInterval(() => { if (!paused && !document.hidden) go(i + 1); }, 3200); };
+  go(0); start();
+  $("#igPrev").addEventListener("click", () => { go(i - 1); start(); });
+  $("#igNext").addEventListener("click", () => { go(i + 1); start(); });
+  media.addEventListener("mouseenter", () => paused = true);
+  media.addEventListener("mouseleave", () => paused = false);
+  // swipe di HP & drag di desktop
+  let x0 = null, dx = 0;
+  const down = x => { x0 = x; dx = 0; track.style.transition = "none"; paused = true; };
+  const move = x => { if (x0 === null) return; dx = x - x0; track.style.transform = `translateX(calc(${-i * 100}% + ${dx}px))`; };
+  const up = () => { if (x0 === null) return; track.style.transition = ""; x0 = null; paused = false;
+    if (Math.abs(dx) > 45) go(i + (dx < 0 ? 1 : -1)); else go(i); start(); };
+  media.addEventListener("touchstart", e => down(e.touches[0].clientX), { passive: true });
+  media.addEventListener("touchmove", e => move(e.touches[0].clientX), { passive: true });
+  media.addEventListener("touchend", up);
+  media.addEventListener("pointerdown", e => { if (e.pointerType === "mouse" && !e.target.closest("button")) down(e.clientX); });
+  addEventListener("pointermove", e => { if (e.pointerType === "mouse") move(e.clientX); });
+  addEventListener("pointerup", e => { if (e.pointerType === "mouse") up(); });
+  // ketuk dua kali = "suka" seperti Instagram
+  media.addEventListener("dblclick", () => { const h = $("#igHeart"); h.classList.add("pop"); h.querySelector("svg").setAttribute("fill", "#E0245E"); h.querySelector("svg").setAttribute("stroke", "#E0245E"); setTimeout(() => h.classList.remove("pop"), 300); });
+})();
 
 const nav = $("#nav"), mbar = $("#mbar");
 const bgImgs = [...document.querySelectorAll(".photo-bg img")];
