@@ -171,10 +171,11 @@ section{position:relative;padding:96px 0}
 .ig-cap{padding:4px 14px 16px;font-size:13.5px;line-height:1.45;color:var(--ink)}
 .ig-cap b{font-weight:800}
 .ig-cap em{font-style:normal;color:#1F5FA8;font-weight:600}
-.ig-cap small{display:block;margin-top:4px;font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.ig-cap small{display:block;margin-top:4px;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
 @keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
 
 /* ---------- marquee layanan ---------- */
+.marquee-wrap{overflow:hidden;padding:14px 0;margin:-14px 0}
 .marquee{background:var(--dark);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.2deg);margin:0 -20px;box-shadow:0 20px 40px -24px rgba(14,23,41,.6)}
 .marquee .track{display:flex;gap:44px;width:max-content;animation:marquee 38s linear infinite}
 .marquee span{display:flex;align-items:center;gap:44px;font-weight:800;font-size:18px;letter-spacing:.02em;white-space:nowrap}
@@ -196,7 +197,7 @@ section{position:relative;padding:96px 0}
 .svc li{display:flex;gap:9px;font-size:15px;font-weight:600;line-height:1.4}
 .svc li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--gold)}
 .svc .pr{margin-top:auto;padding-top:16px;border-top:1.5px dashed rgba(23,36,64,.16)}
-.svc .pr i{display:block;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.svc .pr i{display:block;font-style:normal;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .svc .pr b{font-size:26px;font-weight:800;letter-spacing:-.03em;color:var(--dark)}
 .svc .pr b em{font-style:normal;font-size:16px;color:var(--gold-text);margin-right:3px}
 .svc .pr b span{font-size:14px;color:var(--text2);margin-left:3px}
@@ -211,7 +212,7 @@ section{position:relative;padding:96px 0}
 .svc.hero-card .pr{border-top-color:rgba(255,194,77,.35)}
 .svc.hero-card .pr i{color:var(--mint)}
 .svc.hero-card .pr b em,.svc.hero-card .pr b span{color:var(--gold-hi)}
-.svc .badge{position:absolute;top:22px;right:22px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);
+.svc .badge{position:absolute;top:22px;right:22px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);
             background:linear-gradient(150deg,var(--gold-hi),var(--gold));padding:5px 11px;border-radius:999px}
 
 /* ---------- harga paket (interaktif) ---------- */
@@ -223,13 +224,13 @@ section{position:relative;padding:96px 0}
 .chips{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .chip{border:1.5px solid var(--line);border-radius:14px;padding:12px 10px;font-weight:800;font-size:15px;color:var(--dark);background:#fff;
       transition:all .25s var(--ease)}
-.chip small{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.chip small{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .chip:hover{border-color:var(--gold);transform:translateY(-2px)}
 .chip.on{background:var(--dark);border-color:var(--dark);color:#fff;box-shadow:0 12px 24px -14px rgba(23,36,64,.8)}
 .chip.on small{color:var(--gold-hi)}
 .inc{margin-top:26px;padding-top:22px;border-top:1.5px dashed rgba(23,36,64,.16)}
 .inc h4{font-size:15px;font-weight:800;color:var(--dark);display:flex;align-items:center;gap:10px}
-.count{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);background:linear-gradient(150deg,var(--gold-hi),var(--gold));padding:4px 10px;border-radius:999px}
+.count{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);background:linear-gradient(150deg,var(--gold-hi),var(--gold));padding:4px 10px;border-radius:999px}
 .inc ul{margin-top:12px;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
 .inc li{display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600}
 .chk{flex:none;width:22px;height:22px;border-radius:50%;background:var(--dark);display:grid;place-items:center}
@@ -255,7 +256,7 @@ section{position:relative;padding:96px 0}
          background:linear-gradient(150deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:var(--deep);box-shadow:0 16px 30px -12px rgba(0,0,0,.45),inset 0 2px 0 rgba(255,255,255,.35);
          animation:wiggle 5s ease-in-out infinite}
 .sticker b{display:block;font-size:28px;font-weight:800;line-height:1}
-.sticker span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.sticker span{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 @keyframes wiggle{0%,100%{rotate:-10deg}50%{rotate:-2deg;scale:1.04}}
 .bump{animation:bump .5s var(--spring)}
 @keyframes bump{0%{transform:scale(.92);opacity:.4}100%{transform:none;opacity:1}}
@@ -269,7 +270,7 @@ section{position:relative;padding:96px 0}
 .jasa .t{flex:1;min-width:0}
 .jasa .t b{display:block;font-size:15.5px;font-weight:700;line-height:1.3}
 .jasa .t small{display:block;margin-top:3px;font-size:14px;font-weight:800;color:var(--dark)}
-.jasa .t small i{font-style:normal;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.jasa .t small i{font-style:normal;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
 .jasa .go{flex:none;width:34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center;transition:all .3s var(--ease)}
 .jasa .go svg{width:16px;height:16px}
 .jasa:hover .go{background:var(--gold);transform:rotate(-45deg)}
@@ -284,7 +285,7 @@ section{position:relative;padding:96px 0}
 .docs li+li{border-top:1px solid var(--line)}
 .docs .n{flex:none;width:30px;height:30px;border-radius:9px;background:var(--dark);color:var(--gold-hi);display:grid;place-items:center;font-size:12px;font-weight:800}
 .docs small{font-weight:600;color:var(--muted);font-style:italic}
-.docs .cond{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text2);background:var(--mint);padding:4px 9px;border-radius:999px}
+.docs .cond{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text2);background:var(--mint);padding:4px 9px;border-radius:999px}
 .steps{margin-top:22px;list-style:none;display:flex;flex-direction:column;gap:0;position:relative}
 .steps::before{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:linear-gradient(var(--gold),rgba(255,176,32,.15))}
 .steps li{position:relative;display:flex;gap:18px;padding:12px 0}
@@ -340,7 +341,7 @@ footer img{height:30px;width:auto}
 .x svg{width:20px;height:20px}
 .sh-body{flex:1;overflow:auto;padding:24px 32px 28px;overscroll-behavior:contain}
 .sh-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 32px;border-top:1px solid var(--line);background:#fff;flex-wrap:wrap}
-.sh-foot .p i{display:block;font-style:normal;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sh-foot .p i{display:block;font-style:normal;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .sh-foot .p b{font-size:28px;font-weight:800;letter-spacing:-.03em;color:var(--dark)}
 .sh-foot .p b em{font-style:normal;font-size:16px;color:var(--gold-text);margin-right:3px}
 .sh-foot .p b span{font-size:15px;color:var(--text2);margin-left:3px}
@@ -423,6 +424,7 @@ footer img{height:30px;width:auto}
   .omzet-box,.result,.panel{padding:24px}
   .sticker{width:92px;height:92px;right:18px;top:18px}
   .sticker b{font-size:22px}
+  .sticker span{font-size:9.5px;letter-spacing:.06em}
   .final .box{padding:48px 22px;border-radius:28px}
   .fab{display:none}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));
@@ -441,6 +443,27 @@ footer img{height:30px;width:auto}
   .sh-foot .btn{flex:1}
   .mchips{grid-template-columns:repeat(3,1fr)}
   .aud,.channels{grid-template-columns:1fr}
+  /* --- presisi mobile --- */
+  section{padding:56px 0}
+  .hero .trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+  .hero .trust b{font-size:26px}
+  .hero .trust span{font-size:12px;letter-spacing:.04em;line-height:1.3}
+  .chip{white-space:nowrap;font-size:13.5px;padding:10px 4px;letter-spacing:-.01em}
+  .result .amt{gap:8px}
+  .result .amt em{font-size:20px}
+  .result .amt b{font-size:clamp(38px,12vw,48px)}
+  .result .amt span{font-size:17px}
+  .result .acts .btn{flex:1 1 100%}
+  .docs li{flex-wrap:wrap;row-gap:6px}
+  .docs li>span:nth-child(2){flex:1 1 150px}
+  .docs .cond{white-space:nowrap;margin-left:44px}
+}
+@media (max-width:380px){
+  .container{padding:0 16px}
+  .hero h1{font-size:36px}
+  .omzet-box,.result,.panel{padding:20px}
+  .chip{font-size:12.5px}
+  .hero .trust b{font-size:24px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -511,7 +534,7 @@ footer img{height:30px;width:auto}
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+  <div class="marquee-wrap"><div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div></div>
 
   <!-- ===== LAYANAN ===== -->
   <section id="layanan">
